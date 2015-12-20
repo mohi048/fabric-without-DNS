@@ -1,19 +1,3 @@
-import os
-import socket;
-import configparser
-import time
-import sys
-from fabric.api import cd, env, prefix, run, task, execute
-from fabric.colors import red, green, yellow
-config = configparser.ConfigParser()
-config.read('/root/config.ini')
-
-vm_credentials = dict(config['SSH_CREDENTIALS'])
-ssh_username = str(vm_credentials['ssh.username'])
-ssh_password = str(vm_credentials['ssh.password'])
-
-env.user = ssh_username
-env.password = ssh_password
 
 #### Specify the first 3 block of ip range 
 subnet_block = '192.168.0.'
@@ -27,7 +11,24 @@ excluded_hosts = ['192.168.0.117','192.168.0.118']
 #excluded_hosts = []
 
 
+import os
+import socket;
+import configparser
+import time
+import sys
+from fabric.api import cd, env, prefix, run, task, execute
+from fabric.colors import red, green, yellow
+config = configparser.ConfigParser()
+config.read('./config.ini')
+
+vm_credentials = dict(config['SSH_CREDENTIALS'])
+ssh_username = str(vm_credentials['ssh.username'])
+ssh_password = str(vm_credentials['ssh.password'])
+
+env.user = ssh_username
+env.password = ssh_password
 dead_host = []
+
 def check_port(ips):
 	print(green("Checking the SSH port"))
 	time.sleep(3)
