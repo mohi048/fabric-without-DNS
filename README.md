@@ -19,6 +19,7 @@ pip install requirements.txt
 
 
 3. Edit fab-new.py and update the variables
+
 subnet_block -- Network range of your domain ie - 192.168.0
 
 bl -- First IP in range
