@@ -20,11 +20,15 @@ pip install requirements.txt
 
 3. Edit fab-new.py and update the variables
 subnet_block -- Network range of your domain ie - 192.168.0
+
 bl -- First IP in range
+
 bu -- Last IP in range
+
 excluded_hosts -- IP address to exclude from the fabric task
 
 
 4. Execute the fabric task
+
 fab -f fab-new.py
 
