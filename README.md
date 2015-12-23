@@ -11,7 +11,7 @@ This script also check if SSH service is running.
 
 USAGE
 1. Install the python packages 
-pip install requirements.txt
+pip install -r requirements.txt
 
 
 2. Update the config.ini with the instance credentials
@@ -28,8 +28,9 @@ bu -- Last IP in range
 
 excluded_hosts -- IP address to exclude from the fabric task
 
+4. Define your custom tasks on the function "my_task" or you can create a new function
 
-4. Execute the fabric task
+5. Execute the fabric task by passing the function name as argument to python file
 
-fab -f fab-new.py
+fab -f fab-new.py my_task
 
