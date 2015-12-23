@@ -13,6 +13,10 @@ USAGE
 1. Install the python packages 
 pip install -r requirements.txt
 
+1.1 If PIP install fails , try
+yum install fabric
+apt-get install fabric
+
 
 2. Update the config.ini with the instance credentials
    keep the config.ini file on the same directory where fab-new.py is located
