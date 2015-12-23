@@ -52,7 +52,7 @@ def check_ip_active(subnet):
 		print ("Terminating the program !!!")
 		sys.exit("Specify the correct ip range as defined in bl , bu")
 	else:
-		for i in range(bl,bu):
+		for i in range(bl,bu+1):
 			hostname = subnet + str(i)
 			env.hosts.append(hostname)
 		for items in env.hosts:    
