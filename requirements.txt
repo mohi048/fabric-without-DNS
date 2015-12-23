@@ -1,1 +1,2 @@
 Fabric == 1.10.2
+configparser == 3.3.0r2
